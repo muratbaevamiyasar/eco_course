@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mt-4 mb-4">Oquv resurslari</h2>
+
+<div class="row">
+
+{% for r in resources %}
+
+<div class="col-md-4 mb-4">
+
+<div class="card p-3">
+
+<h5>{{ r.title }}</h5>
+
+<p>{{ r.description }}</p>
+
+<a href="{{ r.pdf.url }}" class="btn btn-green">
+PDF yuklab olish
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
